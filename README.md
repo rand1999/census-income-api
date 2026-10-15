@@ -1,3 +1,10 @@
+# Deploying a ML Model with FastAPI — Census Income
+
+- **Repository platform:** GitHub
+- **Repository URL:** https://github.com/rand1999/census-income-api
+- **Live API (Render):** https://census-income-api-drwq.onrender.com (interactive docs at `/docs`)
+- **CI:** GitHub Actions runs flake8 and pytest on every push to `main`; Render auto-deploys only after CI checks pass.
+
 Working in a command line environment is recommended for ease of use with git and dvc. If on Windows, WSL1 or 2 is recommended.
 
 The repository root is the project root. Run installation, tests, DVC, and deployment commands from here. `requirements.txt`, `setup.py`, `main.py`, `sanitycheck.py`, and `data/census.csv` are at the root. `starter/` contains the Python package; for example, import `process_data` with `from starter.ml.data import process_data`.
