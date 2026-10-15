@@ -8,7 +8,7 @@ import sys
 
 import requests
 
-DEFAULT_URL = "https://census-income-api.onrender.com"
+DEFAULT_URL = "https://census-income-api-drwq.onrender.com"
 
 sample = {
     "age": 52,
