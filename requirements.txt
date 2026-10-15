@@ -1,0 +1,19 @@
+# Python 3.13 — only what the training code, API, tests and CI need.
+
+# Web framework and server
+fastapi==0.117.1
+uvicorn[standard]==0.36.0
+pydantic==2.11.9
+
+# Data science
+pandas==2.3.2
+numpy==2.3.3
+scikit-learn==1.7.2
+
+# HTTP clients (TestClient uses httpx; live_post.py uses requests)
+httpx==0.28.1
+requests==2.32.5
+
+# Testing and linting
+pytest==8.4.2
+flake8==7.3.0
