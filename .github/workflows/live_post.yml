@@ -1,0 +1,24 @@
+name: Live POST to deployed API
+
+on:
+  workflow_dispatch:
+
+jobs:
+  live-post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Wake up the free Render instance
+        run: curl -s --retry 5 --retry-delay 10 --max-time 90 https://census-income-api-drwq.onrender.com/ || true
+
+      - name: Run live_post.py
+        run: python live_post.py
